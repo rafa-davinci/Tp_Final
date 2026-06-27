@@ -11,3 +11,5 @@ yarn-debug.log*
 yarn-error.log*
 # macOS
 .DS_Store
+# Archivos de sistema que no deben subirse al repositorio
+# .git/ no se incluye en .gitignore: es la carpeta del repositorio local
