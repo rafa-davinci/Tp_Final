@@ -1,0 +1,54 @@
+/* ============================================
+   ESTILOS PROPIOS (encima de Bootstrap)
+   ============================================ */
+
+.badge {
+    font-size: 0.65rem;
+}
+
+/* ============================================
+   PASTILLA CON HOVER:
+   ============================================ */
+
+/* La pastilla es el "marco". position: relative para que la capa de datos se ubique respecto a ella. */
+.producto {
+    position: relative;
+}
+
+/* La imagen ocupa todo el ancho de la pastilla */
+.producto img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;   /* más alta que ancha (vertical) */
+    object-fit: cover;     /* recorta para llenar sin deformar */
+}
+
+/* La capa de datos: cubre toda la pastilla, centrada, oculta al inicio */
+.producto-info {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.93);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Al pasar el mouse por la pastilla, la capa de datos aparece */
+.producto:hover .producto-info {
+    opacity: 1;
+}
+
+/* En tablet y celular (menos de 993px) NO usamos hover,la info se muestra siempre, debajo de la imagen, como una tarjeta normal. */
+@media (max-width: 992px) {
+
+    .producto-info {
+        position: static;        /* vuelve al flujo normal, debajo de la imagen */
+        opacity: 1;              /* siempre visible */
+        background-color: transparent;
+    }
+}
