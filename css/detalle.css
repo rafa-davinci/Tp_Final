@@ -1,0 +1,72 @@
+/* ============================================
+   NAVBAR
+   ============================================ */
+
+.navbar-tienda {
+    background-color: #241a1d;
+    border-bottom: 3px solid #b4882f;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.navbar-tienda .nav-link {
+    color: #ffffff;
+}
+
+.navbar-tienda .nav-link:hover {
+    color: #b4882f;
+}
+
+/* El ícono de la hamburguesa es oscuro por defecto (pensado para fondos claros).
+   Como nuestro fondo es oscuro, lo invertimos con un filtro CSS para que se vea blanco. */
+.navbar-tienda .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* El borde del botón también es oscuro por defecto, por la misma razón.
+   Lo aclaramos para que se distinga del fondo. */
+.navbar-tienda .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.55);
+}
+
+/* ============================================
+   ACORDEÓN
+   ============================================ */
+
+.accordion-button:not(.collapsed) {
+    background-color: #b4882f;
+    color: #ffffff;
+}
+
+
+.accordion-button:not(.collapsed)::after {
+    filter: invert(1) brightness(2);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(180, 136, 47, 0.4);
+}
+
+.accordion-item {
+    border-color: #241a1d;
+}
+
+/* ============================================
+   LIST GROUP
+   ============================================ */
+
+/* Le sacamos el borde gris default y separamos los ítems con una línea inferior fina  */
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid rgba(180, 136, 47, 0.35);
+    padding-left: 0;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
